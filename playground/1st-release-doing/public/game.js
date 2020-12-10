@@ -43,29 +43,24 @@ export default function createGame() {
     }
 
     function movePlayer(command) {
-        // console.log(`movePlayer() -> Moving ${command.playerId} with ${command.keyPressed}`)
 
         const acceptedMoves = {
             ArrowUp(player) {
-                // console.log('movePlayer().ArrowUp() -> Moving player Up')
                 if (player.y - 1 >= 0) {
                     player.y--
                 }
             },
             ArrowRight(player) {
-                // console.log('movePlayer().ArrowRight() -> Moving player Right')
                 if (player.x + 1 < state.screen.width) {
                     player.x++
                 }
             },
             ArrowDown(player) {
-                // console.log('movePlayer().ArrowDown() -> Moving player Down')
                 if (player.y + 1 < state.screen.height) {
                     player.y++
                 }
             },
             ArrowLeft(player) {
-                // console.log('movePlayer().ArrowLeft() -> Moving player Left')
                 if (player.x - 1 >= 0) {
                     player.x--
                 }
