@@ -32,9 +32,14 @@
 
         const socket = io()
 
-        socket.on('connect', (socket) => {
+        socket.on('connect', () => {
             const playerId = socket.id
             console.log(`Player connected on Client with id: ${playerId}`)
+        })
+
+        socket.on('setup', (state) => {
+            console.log(`> Receiving "setup" event from server`)
+            console.log(state)
         })
     </script>
 </body>
